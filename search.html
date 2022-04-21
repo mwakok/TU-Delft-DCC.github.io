@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; TU Delft DCC guides</title>
+    <title>Search &#8212; DCC Guides</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -38,45 +40,22 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "TU-Delft-DCC/TU-Delft-DCC.github.io.git");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -112,7 +91,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">TU Delft DCC guides</h1>
+      <h1 class="site-logo" id="site-title">DCC Guides</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="#" method="get">
@@ -120,17 +99,20 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Computing infrastructure
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_Welcome.html">
-   Welcome!
+  <a class="reference internal" href="infrastructure/overview.html">
+   Getting started
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="01_Computing/01_README.html">
-   Research computing guides
+  <a class="reference internal" href="infrastructure/intro_servers.html">
+   Remote servers
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -139,74 +121,103 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_Computing/02_Getting_started.html">
-     Getting started
+    <a class="reference internal" href="infrastructure/VPS_request.html">
+     Request a Virtual Private Server
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="01_Computing/02_Working_with_servers/01_Servers.html">
-     Working remotely with computers
+   <li class="toctree-l2">
+    <a class="reference internal" href="infrastructure/VPS_SSH.html">
+     SSH Tunneling
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/01_VPS_request.html">
-       Request a Virtual Private Server
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/02_ConfiguringPasswordlessLogin.html">
-       Secure login with ssh
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/03_VPS_SSH.html">
-       SSH Tunneling
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/04_GivingSudoPrivilege.html">
-       Giving sudo privilege to a user
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/06_SSL_Certs.html">
-       SSL certificates for your server
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/02_Working_with_servers/07_ApacheWebServer.html">
-       Setting up a web server with Apache
-      </a>
-     </li>
-    </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="01_Computing/03_Containerization/01_Containers.html">
-     Working with containers
+   <li class="toctree-l2">
+    <a class="reference internal" href="infrastructure/VPS_SSL_Certs.html">
+     Setup SSL certificates
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="01_Computing/03_Containerization/02_podman.html">
-       Podman
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="02_Data/00_README.html">
-   Research data guides
+  <a class="reference internal" href="gitlab/gitlab_intro.html">
+   TU Delft GitLab
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gitlab/gitlab_groups.html">
+     Creating GitLab groups
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gitlab/gitlab_docker.html">
+     Continuous Integration with Gitlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gitlab/runner_python.html">
+     Python runner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gitlab/runner_matlab.html">
+     Gitlab runner for MATLAB
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gitlab/runner_docker.html">
+     Docker runner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data management
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_storage/intro.html">
+   TU Delft storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_storage/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_storage/mount_project_drive.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_storage/sync_unison.html">
+     Sync with Unison
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="software/fair.html">
+   FAIR for Research Software
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -215,67 +226,37 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/01_Getting_started.html">
-     Getting started
+    <a class="reference internal" href="software/checklist.html">
+     FAIR software checklist
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/01_Obtain.html">
-     Obtaining data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/02_Scrub.html">
-     Scrubing / Cleaning data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/03_Explore.html">
-     Exploring the data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/04_Model.html">
-     Modeling and Machine Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_Data/05_Interpret.html">
-     Interpreting and Storytelling
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="02_Data/03_Storage/00_README.html">
-     Storage
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="02_Data/03_Storage/01_ProjectDrive_request.html">
-       Request Project Drive space
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="02_Data/03_Storage/02_Sync_Unison.html">
-       Sync with Unison
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="02_Data/03_Storage/03_Mount_ProjectDrive.html">
-       Mount Project Drive on Server
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="03_Software/00_README.html">
-   Research software guides
+  <a class="reference internal" href="testing/intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="testing/python.html">
+     Testing with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="testing/matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="git/intro.html">
+   Version control with git
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -284,58 +265,82 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/01_Intro/0_README.html">
-     Getting started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/02_Project_Setup/0_Project_Setup.html">
-     Software Management
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/03_Code_quality/00_README.html">
-     Code Quality
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/04_Documentation/README.html">
-     Documentation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/05_Reproducibility/README.html">
-     Accessibility &amp; Reproducibility
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="03_Software/06_Advanced%20code%20management/01_CI_CD_devops.html">
-     Advanced code management
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="03_Software/06_Advanced%20code%20management/02_CI_GitLab_Docker.html">
-       Continuous Integration with a GitLab runner
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="03_Software/06_Advanced%20code%20management/02_GitlabGroupArrangement.html">
-       Setting up groups and assigning contributors to the projects with the Gitlab
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_Software/07_FAIR_checklist/checklist.html">
-     FAIR for research software guidelines
+    <a class="reference internal" href="git/branch_management.html">
+     Branch management
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers/docker_users.html">
+     Docker for users
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/management_plan.html">
+   Software management plan
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources/curriculum.html">
+   Research software curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources/courses.html">
+   Courses and workshops
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/dcc.html">
+   About the DCC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/tudelft.html">
+   TU Delft community
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/code_of_conduct.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/contributing.html">
+   Contributing guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/authors.html">
+   Contributors
+  </a>
  </li>
 </ul>
 
@@ -377,7 +382,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
@@ -460,7 +465,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <footer class="footer">
   <p>
     
-      By TU Delft DCC<br/>
+      By TU Delft Digital Competence Center<br/>
     
       <div class="extra_footer">
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.

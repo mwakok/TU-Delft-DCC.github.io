@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSH Tunneling &#8212; DCC Guides</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setup SSL certificates" href="VPS_SSL_Certs.html" />
+    <link rel="prev" title="Request a Virtual Private Server" href="VPS_request.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DCC Guides</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Computing infrastructure
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Getting started
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro_servers.html">
+   Remote servers
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="VPS_request.html">
+     Request a Virtual Private Server
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="VPS_SSL_Certs.html">
+     Setup SSL certificates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../gitlab/gitlab_intro.html">
+   TU Delft GitLab
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitlab/gitlab_groups.html">
+     Creating GitLab groups
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitlab/gitlab_docker.html">
+     Continuous Integration with Gitlab
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitlab/runner_python.html">
+     Python runner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitlab/runner_matlab.html">
+     Gitlab runner for MATLAB
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../gitlab/runner_docker.html">
+     Docker runner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data management
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_storage/intro.html">
+   TU Delft storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/mount_project_drive.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/sync_unison.html">
+     Sync with Unison
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Research software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/fair.html">
+   FAIR for Research Software
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/checklist.html">
+     FAIR software checklist
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../testing/intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../testing/python.html">
+     Testing with Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../testing/matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../git/intro.html">
+   Version control with git
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../containers/docker_users.html">
+     Docker for users
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/management_plan.html">
+   Software management plan
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/curriculum.html">
+   Research software curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/courses.html">
+   Courses and workshops
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Community
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/dcc.html">
+   About the DCC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/tudelft.html">
+   TU Delft community
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/code_of_conduct.html">
+   Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/contributing.html">
+   Contributing guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/authors.html">
+   Contributors
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/infrastructure/VPS_SSH.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/infrastructure/VPS_SSH.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SSH Tunneling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+     Set a Default SSH Tunneling for a Host (Linux Terminal)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tunneling-with-winscp">
+     Tunneling with WinSCP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-data-around">
+   Moving Data Around
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-from-client-to-host-using-proxycommand">
+     Copy Data from Client to Host using ProxyCommand
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-from-host-to-client-using-proxycommand">
+     Copy Data from Host to Client using ProxyCommand
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-using-ssh-tunneling">
+     Copy Data using SSH Tunneling
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
+     scp with sudo files from a remote host to another remote host
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>SSH Tunneling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SSH Tunneling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+     Set a Default SSH Tunneling for a Host (Linux Terminal)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tunneling-with-winscp">
+     Tunneling with WinSCP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-data-around">
+   Moving Data Around
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-from-client-to-host-using-proxycommand">
+     Copy Data from Client to Host using ProxyCommand
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-from-host-to-client-using-proxycommand">
+     Copy Data from Host to Client using ProxyCommand
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-data-using-ssh-tunneling">
+     Copy Data using SSH Tunneling
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
+     scp with sudo files from a remote host to another remote host
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ssh-tunneling">
+<h1>SSH Tunneling<a class="headerlink" href="#ssh-tunneling" title="Permalink to this headline">¶</a></h1>
+<p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. Thefore, to reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host, e.g., <em><a class="reference external" href="http://my-vm.tudelft.nl">my-vm.tudelft.nl</a></em>. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
+<div class="section" id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+<h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>On your local machine, edit the <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file and add the following confuration:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host &lt;host-nickname&gt;
+    HostName &lt;target-host&gt;
+    User &lt;target-username&gt;
+    ProxyCommand ssh &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl -W %h:%p 
+</pre></div>
+</div>
+<p>Replace:
+<strong><host-nickname>:</strong> a name for you choice for the targe host, e.g., <em>my-server</em>
+<strong><target-host>:</strong> the actual name of the target host (FQDM), e.g, <em><a class="reference external" href="http://server.tudelft.nl">server.tudelft.nl</a></em>
+<strong><target-username>:</strong>  the username used to login to the target host, e.g., <em>wlodewijk</em>
+<strong><bastion-username>:</strong> the username used to login to the bastion server, e.g., <em>wlodewijk</em></p>
+<ol class="simple">
+<li><p>Create a key-pair on the local machine.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -f ~/.ssh/&lt;my-keyname&gt; -t rsa -b <span class="m">4096</span>
+</pre></div>
+</div>
+<p>You will be promted to crate a <em>passphrase</em>, we recommend you to add one to make the connection more secure. The passphrase will be asked every time you connect to the target host.</p>
+<p>A private and public keys will be added to <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code>. The public key is in the <code class="docutils literal notranslate"><span class="pre">&lt;my-keyname&gt;.pub</span></code></p>
+<ol class="simple">
+<li><p>Copy the content of the public key to the <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> file in the target host.</p></li>
+<li><p>Connect to the target host using <em>ssh tunneling</em>. Use your <em>bastion-password</em> when asked.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ssh &lt;host-nickname&gt;
+</pre></div>
+</div>
+<p>If you encounter problems with the connection. Use the debug mode <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-vvv</span> <span class="pre">&lt;host-nickname&gt;</span></code> to find out what might have gone wrong.</p>
+</div>
+<div class="section" id="tunneling-with-winscp">
+<h2>Tunneling with WinSCP<a class="headerlink" href="#tunneling-with-winscp" title="Permalink to this headline">¶</a></h2>
+<p>If using winscp, you will find detailed information here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="moving-data-around">
+<h1>Moving Data Around<a class="headerlink" href="#moving-data-around" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="copy-data-from-client-to-host-using-proxycommand">
+<h2>Copy Data from Client to Host using ProxyCommand<a class="headerlink" href="#copy-data-from-client-to-host-using-proxycommand" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;my-local-file&gt;  &lt;target-username&gt;@&lt;target-host&gt;:/&lt;remote-directory&gt;/
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-data-from-host-to-client-using-proxycommand">
+<h2>Copy Data from Host to Client using ProxyCommand<a class="headerlink" href="#copy-data-from-host-to-client-using-proxycommand" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;target-username&gt;@&lt;target-host&gt;:/tmp/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-data-using-ssh-tunneling">
+<h2>Copy Data using SSH Tunneling<a class="headerlink" href="#copy-data-using-ssh-tunneling" title="Permalink to this headline">¶</a></h2>
+<p>If a default <a class="reference external" href="##ssh-tunneling">ssh tunneling</a> was configured correctly. Data can be copied to and from a remote host as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy TO Remote Host</span>
+$ scp &lt;my-local-file&gt; &lt;host-nickname&gt;:/&lt;remote-directory&gt;/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy FROM Remote Host</span>
+$ scp &lt;host-nickname&gt;:/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/ 
+</pre></div>
+</div>
+</div>
+<div class="section" id="scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
+<h2>scp with sudo files from a remote host to another remote host<a class="headerlink" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" title="Permalink to this headline">¶</a></h2>
+<p>“-C /tmp/a” can be used when you wanted to “cd /tmp/a”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">source</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span> <span class="n">sudo</span> <span class="n">tar</span> <span class="n">cf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">a</span> <span class="o">.</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">target</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span>  <span class="n">sudo</span> <span class="n">tar</span> <span class="n">xvf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">b</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./infrastructure"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="VPS_request.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Request a Virtual Private Server</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="VPS_SSL_Certs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Setup SSL certificates</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By TU Delft Digital Competence Center<br/>
+    
+      <div class="extra_footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
