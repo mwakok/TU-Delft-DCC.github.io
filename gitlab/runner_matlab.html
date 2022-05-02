@@ -860,8 +860,8 @@ gitlab/gitlab-runner:latest
 <span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;bash&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>To build a Docker image with the name <code class="docutils literal notranslate"><span class="pre">matlab-gitlab</span></code>, run the following command in the folder containing the Dockerfile:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker build . -t matlab-gitlab:latest
+<p>To build a Docker image with the name <code class="docutils literal notranslate"><span class="pre">matlab-gitlab</span></code> and the version reference <code class="docutils literal notranslate"><span class="pre">r2021b</span></code>, run the following command in the folder containing the Dockerfile:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo docker build . -t matlab-gitlab:r2021b
 </pre></div>
 </div>
 <p>You can verify the presence of the image with</p>
@@ -886,7 +886,7 @@ gitlab/gitlab-runner:latest
   --url <span class="s2">&quot;https://gitlab.tudelft.nl/&quot;</span> <span class="se">\</span>
   --registration-token <span class="s2">&quot;REPOSITORY_TOKEN&quot;</span> <span class="se">\</span>
   --executor <span class="s2">&quot;docker&quot;</span> <span class="se">\</span>
-  --docker-image matlab-pvmd:r2021b <span class="se">\</span>
+  --docker-image matlab-gitlab:r2021b <span class="se">\</span>
   --description <span class="s2">&quot;matlab-runner&quot;</span> <span class="se">\</span>
   --tag-list <span class="s2">&quot;matlab&quot;</span> <span class="se">\</span>
   --docker-privileged<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
@@ -922,7 +922,7 @@ gitlab/gitlab-runner:latest
     <span class="p">[</span><span class="n">runners</span><span class="o">.</span><span class="n">cache</span><span class="o">.</span><span class="n">azure</span><span class="p">]</span>
   <span class="p">[</span><span class="n">runners</span><span class="o">.</span><span class="n">docker</span><span class="p">]</span>
     <span class="n">tls_verify</span> <span class="o">=</span> <span class="n">false</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="s2">&quot;matlab-gitlab:latest&quot;</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="s2">&quot;matlab-gitlab:r2021b&quot;</span>
     <span class="n">privileged</span> <span class="o">=</span> <span class="n">true</span>
     <span class="n">disable_entrypoint_overwrite</span> <span class="o">=</span> <span class="n">false</span>
     <span class="n">cap_add</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;NET_ADMIN&quot;</span><span class="p">]</span>
@@ -1020,7 +1020,7 @@ Under <strong>Settings -&gt; CI/CD -&gt; Variables</strong> add a new variable c
 <ol>
 <li><p>Update the Matlab version in the Dockerfile</p></li>
 <li><p>Build the docker image with
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">-t</span> <span class="pre">matlab-pvmd:&lt;version&gt;</span></code></p></li>
+<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">docker</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">-t</span> <span class="pre">matlab-gitlab:&lt;version&gt;</span></code></p></li>
 <li><p>Download a new <code class="docutils literal notranslate"><span class="pre">license.lic</span></code> file (see step 5 of this guide)</p></li>
 <li><p>Update the CI Variable <code class="docutils literal notranslate"><span class="pre">MATLAB_LICENSE</span></code> with the new license content</p></li>
 <li><p>Update the image names (not the tags) in <code class="docutils literal notranslate"><span class="pre">.gitlab-ci.yml</span></code> to use the new image.</p>
