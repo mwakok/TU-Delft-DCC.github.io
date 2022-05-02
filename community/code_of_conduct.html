@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing guidelines" href="contributing.html" />
-    <link rel="prev" title="TU Delft community" href="tudelft.html" />
+    <link rel="next" title="Contributing guidelines" href="contribute.html" />
+    <link rel="prev" title="About the DCC" href="dcc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,6 +143,11 @@ const thebe_selector_output = ".output, .cell_output"
      Setup SSL certificates
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
+     Setting up a web server with Apache
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -180,8 +185,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_storage/intro.html">
-   TU Delft storage
+  <a class="reference internal" href="../data_fair/intro.html">
+   FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -190,8 +195,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../data_fair/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_storage/intro.html">
+   TU Delft storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
     <a class="reference internal" href="../data_storage/project_drive_request.html">
      Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/project_drive_mounting.html">
+     Mount Project Drive on Server
     </a>
    </li>
    <li class="toctree-l2">
@@ -209,11 +236,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../software/fair.html">
-   FAIR for Research Software
+  <a class="reference internal" href="../software/intro.html">
+   FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,14 +250,36 @@ const thebe_selector_output = ".output, .cell_output"
      FAIR software checklist
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/testing_intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/testing_matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../git/intro.html">
-   Version control with git
+   Version control with Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -246,8 +295,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../containers/intro.html">
    Working with containers
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -259,26 +308,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../software/management_plan.html">
-   Software management plan
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/curriculum.html">
-   Research software curriculum
+  <a class="reference internal" href="../training/courses.html">
+   Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/courses.html">
-   Courses and workshops
+  <a class="reference internal" href="../training/curriculum.html">
+   Research Software Curriculum
   </a>
  </li>
 </ul>
@@ -293,22 +337,17 @@ const thebe_selector_output = ".output, .cell_output"
    About the DCC
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tudelft.html">
-   TU Delft community
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Code of Conduct
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="contributing.html">
+  <a class="reference internal" href="contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -686,14 +725,14 @@ available at <a class="reference external" href="http://contributor-covenant.org
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="tudelft.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="dcc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TU Delft community</p>
+            <p class="prev-next-title">About the DCC</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="contributing.html" title="next page">
+    <a class='right-next' id="next-link" href="contribute.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Contributing guidelines</p>

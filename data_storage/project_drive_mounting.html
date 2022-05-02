@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Request a Virtual Private Server &#8212; DCC Guides</title>
+    <title>Mount Project Drive on Server &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SSH Tunneling" href="VPS_SSH.html" />
-    <link rel="prev" title="Remote servers" href="intro_servers.html" />
+    <link rel="next" title="Sync with Project Drive and SURFDrive with Unison" href="sync_unison.html" />
+    <link rel="prev" title="Request Project Drive space" href="project_drive_request.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,39 +112,39 @@ const thebe_selector_output = ".output, .cell_output"
   Computing infrastructure
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="overview.html">
+  <a class="reference internal" href="../infrastructure/overview.html">
    Getting started
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intro_servers.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../infrastructure/intro_servers.html">
    Remote servers
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/VPS_request.html">
      Request a Virtual Private Server
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="VPS_SSH.html">
+    <a class="reference internal" href="../infrastructure/VPS_SSH.html">
      SSH Tunneling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="VPS_SSL_Certs.html">
+    <a class="reference internal" href="../infrastructure/VPS_SSL_Certs.html">
      Setup SSL certificates
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="apache_webserver.html">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
      Setting up a web server with Apache
     </a>
    </li>
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
   Data management
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../data_fair/intro.html">
    FAIR data
@@ -201,28 +201,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_storage/intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
    TU Delft storage
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../data_storage/project_drive_request.html">
+    <a class="reference internal" href="project_drive_request.html">
      Request Project Drive space
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../data_storage/project_drive_mounting.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Mount Project Drive on Server
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../data_storage/sync_unison.html">
+    <a class="reference internal" href="sync_unison.html">
      Sync with Project Drive and SURFDrive with Unison
     </a>
    </li>
@@ -449,7 +449,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/infrastructure/VPS_request.md"
+        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/data_storage/project_drive_mounting.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -477,7 +477,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/infrastructure/VPS_request.md"
+        <a href="../_sources/data_storage/project_drive_mounting.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -552,35 +552,50 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools-software">
-   Tools/Software
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#steps">
    Steps
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-1-navigate-to-the-tu-delft-server-request-form">
-     Step 1: Navigate to the TU Delft server request form
+    <a class="reference internal nav-link" href="#step-1-connect-to-your-tu-delft-vps-via-ssh">
+     Step 1. Connect to your TU Delft VPS via SSH
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2-fill-and-send-the-form-according-to-your-preferences-and-needs">
-     Step 2: Fill and send the form according to your preferences and needs
+    <a class="reference internal nav-link" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">
+     Step 2. Create a new directory as the mounting point preferably in /media
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-locate-the-url-of-your-project-storage">
+     Step 3. Locate the URL of your project storage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-open-the-fstab-file">
+     Step 4. Open the fstab file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details">
+     Step 5. Edit the fstab file to include project storage technical details
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-save-the-fstab-file">
+     Step 6. Save the fstab file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-mounting-the-project-drive">
+     Step 7. Mounting the project drive
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-configuration-of-your-vps">
-   Initial Configuration of your VPS
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-steps">
-   Next Steps
+  <a class="reference internal nav-link" href="#notes-and-next-steps">
+   Notes and next steps
   </a>
  </li>
 </ul>
@@ -592,7 +607,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Request a Virtual Private Server</h1>
+                <h1>Mount Project Drive on Server</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -618,35 +633,50 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools-software">
-   Tools/Software
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#steps">
    Steps
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-1-navigate-to-the-tu-delft-server-request-form">
-     Step 1: Navigate to the TU Delft server request form
+    <a class="reference internal nav-link" href="#step-1-connect-to-your-tu-delft-vps-via-ssh">
+     Step 1. Connect to your TU Delft VPS via SSH
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#step-2-fill-and-send-the-form-according-to-your-preferences-and-needs">
-     Step 2: Fill and send the form according to your preferences and needs
+    <a class="reference internal nav-link" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">
+     Step 2. Create a new directory as the mounting point preferably in /media
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-locate-the-url-of-your-project-storage">
+     Step 3. Locate the URL of your project storage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-4-open-the-fstab-file">
+     Step 4. Open the fstab file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details">
+     Step 5. Edit the fstab file to include project storage technical details
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-6-save-the-fstab-file">
+     Step 6. Save the fstab file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-7-mounting-the-project-drive">
+     Step 7. Mounting the project drive
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-configuration-of-your-vps">
-   Initial Configuration of your VPS
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-steps">
-   Next Steps
+  <a class="reference internal nav-link" href="#notes-and-next-steps">
+   Notes and next steps
   </a>
  </li>
 </ul>
@@ -659,87 +689,78 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="request-a-virtual-private-server">
-<h1>Request a Virtual Private Server<a class="headerlink" href="#request-a-virtual-private-server" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="mount-project-drive-on-server">
+<h1>Mount Project Drive on Server<a class="headerlink" href="#mount-project-drive-on-server" title="Permalink to this headline">#</a></h1>
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
-<p>This page describes the essentials for requesting and setting up a TU Delft managed server. A server is a computer that can handle requests. Servers are often a critical component of architectural solutions for data management. There are many reasons why you as a researcher may need to request a server, for example:</p>
-<ul class="simple">
-<li><p>Automation of a process in your data collection</p></li>
-<li><p>A part of your analysis should be running continuously, and you cannot do it with your machine</p></li>
-<li><p>Specific functionality (web server)</p></li>
-<li><p>You need a machine to handle large amounts of requests</p></li>
-<li><p>You want to outsource the maintenance of the server to TU Delft ICT</p></li>
-<li><p>Rely on safety and security administrated by the University</p></li>
-<li><p>Securing/controlling access</p></li>
-<li><p>Mounting storage drive</p></li>
-</ul>
 </div>
 <div class="section" id="what-this-documentation-will-help-achieve">
 <h2>What this documentation will help achieve<a class="headerlink" href="#what-this-documentation-will-help-achieve" title="Permalink to this headline">#</a></h2>
-<p>This documentation helps researchers to request a VPS and data storage on the Project Drive. There are other forms of storage available, but Project Drive storage is often recommended for expandable and secure data preservation.</p>
+<p>Project drive storage from TU Delft ICT can be mounted and made accessible in your (TU Delft) Virtual Private Server.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>TU Delft netID</p></li>
-<li><p>Basic knowledge of Linux (if requesting Linux server, recommended)</p></li>
-</ul>
-</div>
-<div class="section" id="tools-software">
-<h2>Tools/Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>For Windows users, you will need a programming and runtime environment like Cygwin or SSH client like PuTTY in order to access the VPS running Linux</p></li>
-</ul>
+<p>A (TU Delft) Virtual Private Server and space on the (TU Delft) Project Drive</p>
 </div>
 <div class="section" id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Navigate to the TU Delft server request form</p></li>
-<li><p>Fill and send the form according to your preferences and needs</p></li>
-<li><p>Receive confirmation of server deployment from TU Delft ICT</p></li>
-<li><p>Login to your server for the first time</p></li>
+<li><p>Connect to your TU Delft VPS via SSH</p></li>
+<li><p>Think of a mount point and create a new directory for it (It is a convention to mount external drives into /media)</p></li>
+<li><p>Locate the URL of your project storage</p></li>
+<li><p>Open the fstab file</p></li>
+<li><p>Edit the fstab file to include project storage technical details</p></li>
+<li><p>Save the fstab file</p></li>
+<li><p>Mounting the project drive</p></li>
 </ol>
-<div class="section" id="step-1-navigate-to-the-tu-delft-server-request-form">
-<h3>Step 1: Navigate to the TU Delft server request form<a class="headerlink" href="#step-1-navigate-to-the-tu-delft-server-request-form" title="Permalink to this headline">#</a></h3>
-<p>You can make a request for a server via the <a class="reference external" href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=418c986f186d4934848dc2712039ed34">TopDesk self service portal</a>.</p>
+<div class="section" id="step-1-connect-to-your-tu-delft-vps-via-ssh">
+<h3>Step 1. Connect to your TU Delft VPS via SSH<a class="headerlink" href="#step-1-connect-to-your-tu-delft-vps-via-ssh" title="Permalink to this headline">#</a></h3>
+<p>Follow instructions in TU Delft ICT email from initial server setup or configure 1-step connection via SSH.</p>
 </div>
-<div class="section" id="step-2-fill-and-send-the-form-according-to-your-preferences-and-needs">
-<h3>Step 2: Fill and send the form according to your preferences and needs<a class="headerlink" href="#step-2-fill-and-send-the-form-according-to-your-preferences-and-needs" title="Permalink to this headline">#</a></h3>
-<p>The form is divided into three sections: <strong>Caller Details</strong>, <strong>General Questions</strong>, and <strong>Technical Questions</strong>.</p>
-<p><strong>Caller Details</strong> should contain the contact information of the main administrator of this server. If you select your name, the fields below should be auto-populated with your building, phone number, email, department/program, organizational unit, and (sometimes) room.</p>
-<img width="547" alt="MicrosoftTeams-image" src="https://user-images.githubusercontent.com/70262847/124608876-65778580-de6f-11eb-9c45-edd730417203.png">
-<p>The last question in the <strong>Caller Details</strong> section refers to access to the server by external users. Generally speaking, granting access to TU Delft-managed servers is not recommended, but if it is necessary there is an option to add the contact details of the external party and the reason(s) for which they should have access. You will need to provide a company-affiliated email address for the external user, and the request may or may not be granted by ICT. <strong>Note:</strong> Keep in mind that this access is to the backend of things, so if for example you want to deploy a web server to share your data widely, users <strong>do not</strong> need direct access to the server in order to access the data itself.</p>
-<hr class="docutils" />
-<p>The next section contains <strong>General Questions</strong> about the name and purpose of your server. In the field of “Expiration Date,” if you plan to use this server ongoing into the future, you can either leave the field blank or add a date in 10+ years. TU Delft ICT should alert you when the expiration date you select is near.</p>
-<p><img alt="436ab820-8194-4212-8622-93758ba56f56" src="https://user-images.githubusercontent.com/70262847/124609178-b1c2c580-de6f-11eb-8e33-0dfcbf79226e.jpg" /></p>
-<p>Here you can also add the netIDs of your collaborators who should have read/write access to the server, as well as the netID of your faculty Data Steward if you would like their help (optional). You can find your faculty Data Steward contact information <a class="reference external" href="https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact/">here</a>.</p>
-<hr class="docutils" />
-<p>The <strong>Technical Questions</strong> section asks you to specify an operating system and some other technical details about your server configuration. You can choose between four basic configuration options - you can of course consider which one best fits your needs. If you are new to working with servers, probably the best choice is Basic configuration 4.</p>
-<p>The next question deals with opening ports to the server through the TU Delft firewall. Ports are essentially gateways to the server that are specific to different purposes. For example, port 80 is opened to handle HTTP requests, port 20 is opened to handle SSH requests, port 3306 is opened to allow access to a MySQL database, and port 443 is opened to handle HTTPS requests. If you are planning to use your VPS as a webserver, ports 80 and 443 should be open. You can use this space to ask ICT to do so.</p>
-<p>The next section, FQDN, is the way you can refer to your server on the internet. The recommendation is a format like <code class="docutils literal notranslate"><span class="pre">&lt;servername&gt;.&lt;facultyabbreviation&gt;.tudelt.nl</span></code>. In general, it’s best to keep names relatively short and informative to make it easy to reference and remember.</p>
-<p>You should also be sure to check the instructions in the form and contact your faculty <a class="reference external" href="https://www.tudelft.nl/en/library/current-topics/research-data-management/r/support/data-stewardship/contact/">Data Steward</a> if you need further explanation.</p>
+<div class="section" id="step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media">
+<h3>Step 2. Create a new directory as the mounting point preferably in /media<a class="headerlink" href="#step-2-create-a-new-directory-as-the-mounting-point-preferably-in-media" title="Permalink to this headline">#</a></h3>
+<p>This is where you will mount the project drive. Use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/media</span></code> to enter the media directory, and <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">&lt;yourprojectname&gt;</span></code> to create a new directory where the TU Delft project drive will be mounted.</p>
+</div>
+<div class="section" id="step-3-locate-the-url-of-your-project-storage">
+<h3>Step 3. Locate the URL of your project storage<a class="headerlink" href="#step-3-locate-the-url-of-your-project-storage" title="Permalink to this headline">#</a></h3>
+<p>This can be found either in the email from TU Delft ICT confirming project drive storage setup, or by going to <a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>, and then WebDav Web Links &gt; Staff-Umbrella &gt; Enter your netID and password &gt; “Your Project Name”. Copy everything after “<a class="reference external" href="https://webdata.tudelft.nl/">https://webdata.tudelft.nl/</a>” (this will be staff-umbrella/yourprojectname)</p>
+</div>
+<div class="section" id="step-4-open-the-fstab-file">
+<h3>Step 4. Open the fstab file<a class="headerlink" href="#step-4-open-the-fstab-file" title="Permalink to this headline">#</a></h3>
+<p>The fstab file is where you can list the addresses of external file systems you want to mount. Find it in the /etc/ directory by typing <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vi</span> <span class="pre">fstab</span></code>. The fstab file must be in the /etc/ directory.</p>
+</div>
+<div class="section" id="step-5-edit-the-fstab-file-to-include-project-storage-technical-details">
+<h3>Step 5. Edit the fstab file to include project storage technical details<a class="headerlink" href="#step-5-edit-the-fstab-file-to-include-project-storage-technical-details" title="Permalink to this headline">#</a></h3>
+<p>Basically you need to add one line to this file. This line consists of four parts: (i) filesystem, (ii) mount point, (iii) type, and (iv) options. The filesystem refers to the project drive address which is specified in the ICT email. The mount point is where you want to mount the project drive in the VPS. The third part determines the type of the filesystem and in the last part you specify some options such as privileges.</p>
+<p>To add the filesystem, open the /etc/fstab file with the sudo privilage and switch to the insert mode (hit “i” to switch to insert mode and be able to type), and write <code class="docutils literal notranslate"><span class="pre">//tudelft.net/</span></code> and paste the latter half of the URL you copied from the WebDav links. The full URL should be in this format: <code class="docutils literal notranslate"><span class="pre">//tudelft.net/staff-umbrella/yourprojectname</span></code>.</p>
+<p>For the mount point, add a space followed by the location in your VPS where you want to mount the Project Drive storage (where you created the folder previously, e.g., <code class="docutils literal notranslate"><span class="pre">/media/&lt;server_mount_point&gt;</span></code> ).</p>
+<p>The full new record in the fstab file should be formatted like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">your_netID</span><span class="o">&gt;</span><span class="nd">@sftp</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span><span class="p">:</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/&lt;</span><span class="n">Project_Drive_space</span><span class="o">&gt;</span>  <span class="o">/</span><span class="n">media</span><span class="o">/&lt;</span><span class="n">server_mount_point</span><span class="o">&gt;</span> <span class="n">fuse</span><span class="o">.</span><span class="n">sshfs</span>  <span class="n">rw</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">users</span><span class="p">,</span><span class="n">_netdev</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></div>
+</div>
+<p>If that throws a permissions error, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">tudelft</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">staff</span><span class="o">-</span><span class="n">umbrella</span><span class="o">/</span><span class="n">ODCOR</span><span class="o">/</span> <span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">odcor</span> <span class="n">cifs</span> <span class="n">username</span><span class="o">=</span><span class="n">acryan</span><span class="p">,</span><span class="n">noauto</span><span class="p">,</span><span class="n">uid</span><span class="o">=</span><span class="mi">549192</span><span class="p">,</span><span class="n">gid</span><span class="o">=</span><span class="mi">5004</span><span class="p">,</span><span class="n">forcegid</span><span class="p">,</span><span class="n">rw</span><span class="p">,</span><span class="n">_netdev</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="initial-configuration-of-your-vps">
-<h2>Initial Configuration of your VPS<a class="headerlink" href="#initial-configuration-of-your-vps" title="Permalink to this headline">#</a></h2>
-<p>A few days after submitting the request, you will receive an email from ICT with login details. You can connect to your VPS via ssh. If you are in the windows environment, it is recommended to install Cygwin and its packages to be able to use the ssh command in a non-unix environment. The unix based systems (e.g., mac) contain ssh by default. In order to login to your VPS, you need to first ssh to the bastion server (ssh <username>&#64;linux-bastion-ex.tudelft.nl) and then from there login to your server (ssh <servername>). The first thing to do after logging into the server is to update the packages:</p>
-<p>(For Debian distributions such as Ubuntu)
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code></p>
-<p>(For RedHat distributions)
-<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">update</span></code></p>
-<p>It would be also useful to set a password for the VPS when you log in. You can do that by passwd command.</p>
+<div class="section" id="step-6-save-the-fstab-file">
+<h3>Step 6. Save the fstab file<a class="headerlink" href="#step-6-save-the-fstab-file" title="Permalink to this headline">#</a></h3>
+<p>Use Control+C followed by <code class="docutils literal notranslate"><span class="pre">:wq</span></code> to save the file and close it to get back to your terminal.</p>
 </div>
-<div class="section" id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">#</a></h2>
-<p>Common next steps after obtaining a VPS and storage include initial configuration steps like establishing a connection via SSH and mounting Project Drive storage; and also software installation steps for tools like Docker, and setting up Apache Web Server. We will add more documentation when common installations come to our attention, so please reach out to <a class="reference external" href="mailto:dcc&#37;&#52;&#48;tudelft&#46;nl">dcc<span>&#64;</span>tudelft<span>&#46;</span>nl</a> with questions or suggestions.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04">Install Docker</a></p></li>
-<li><p><a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">Configure Docker for use as non-root</a></p></li>
-<li><p><a class="reference external" href="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Setting-up-an-Apache-Server">Apache Web Server</a></p></li>
-<li><p><a class="reference external" href="https://gitlab.tudelft.nl/acryan/data-management-for-researchers/-/wikis/Configuring-VM-Connection">Configuring VM connection via SSH</a>.</p></li>
-</ul>
+<div class="section" id="step-7-mounting-the-project-drive">
+<h3>Step 7. Mounting the project drive<a class="headerlink" href="#step-7-mounting-the-project-drive" title="Permalink to this headline">#</a></h3>
+<p>To mount the project drive use the <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code> command. You can also unmount it using <code class="docutils literal notranslate"><span class="pre">fusermount</span> <span class="pre">-u</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code>.</p>
+</div>
+</div>
+<div class="section" id="notes-and-next-steps">
+<h2>Notes and next steps<a class="headerlink" href="#notes-and-next-steps" title="Permalink to this headline">#</a></h2>
+<p>The project drive will not mount automatically, so you will need to mount it manually each time you start the server. To do so, from the home (<code class="docutils literal notranslate"><span class="pre">/</span></code>) directory in your server run <code class="docutils literal notranslate"><span class="pre">mount</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code>. You should now be able to <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/media/&lt;server_mount_point&gt;</span></code> and view your files stored on the project drive using <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<p>Note, if the step above does not work, it probably means that the packages for mounting cifs-type filesystems haven’t been installed. Depending on your linux flavour you will need to install them first using:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
+<p>on ubuntu/debian like linuxes, or</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">yum</span> <span class="pre">install</span> <span class="pre">cifs-utils</span></code></p>
+<p>on redhat/centos/fedora flavours.</p>
+<p>The steps above can also be used to mount any storage offered by TU Delft with a WebDav link (staff-homes, staff-groups, staff-bulk, student-homes, student-groups and apps). Simply use the latter half of the URL from the WebDav web link of your storage drive (step 5), which will change from staff-umbrella (project drive) to something else depending on the storage drive you would like to mount.</p>
 </div>
 </div>
 
@@ -756,7 +777,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./infrastructure"
+            path: "./data_storage"
         },
         predefinedOutput: true
     }
@@ -770,17 +791,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro_servers.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="project_drive_request.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Remote servers</p>
+            <p class="prev-next-title">Request Project Drive space</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="VPS_SSH.html" title="next page">
+    <a class='right-next' id="next-link" href="sync_unison.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">SSH Tunneling</p>
+        <p class="prev-next-title">Sync with Project Drive and SURFDrive with Unison</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

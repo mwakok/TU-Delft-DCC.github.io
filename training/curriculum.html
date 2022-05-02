@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to use this curriculum &#8212; DCC Guides</title>
+    <title>Research Software Curriculum &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Courses and workshops" href="courses.html" />
-    <link rel="prev" title="Software management plan" href="../software/management_plan.html" />
+    <link rel="next" title="About the DCC" href="../community/dcc.html" />
+    <link rel="prev" title="Courses and workshops" href="courses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,6 +143,11 @@ const thebe_selector_output = ".output, .cell_output"
      Setup SSL certificates
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
+     Setting up a web server with Apache
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -180,8 +185,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_storage/intro.html">
-   TU Delft storage
+  <a class="reference internal" href="../data_fair/intro.html">
+   FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -190,8 +195,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../data_fair/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_storage/intro.html">
+   TU Delft storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
     <a class="reference internal" href="../data_storage/project_drive_request.html">
      Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/project_drive_mounting.html">
+     Mount Project Drive on Server
     </a>
    </li>
    <li class="toctree-l2">
@@ -209,11 +236,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../software/fair.html">
-   FAIR for Research Software
+  <a class="reference internal" href="../software/intro.html">
+   FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,14 +250,36 @@ const thebe_selector_output = ".output, .cell_output"
      FAIR software checklist
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/testing_intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/testing_matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../git/intro.html">
-   Version control with git
+   Version control with Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -246,8 +295,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../containers/intro.html">
    Working with containers
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -259,26 +308,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../software/management_plan.html">
-   Software management plan
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Training
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Research software curriculum
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="courses.html">
    Courses and workshops
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Research Software Curriculum
   </a>
  </li>
 </ul>
@@ -294,21 +338,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../community/tudelft.html">
-   TU Delft community
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../community/code_of_conduct.html">
    Code of Conduct
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../community/contributing.html">
+  <a class="reference internal" href="../community/contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -410,7 +449,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/resources/curriculum.md"
+        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/training/curriculum.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -438,7 +477,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/resources/curriculum.md"
+        <a href="../_sources/training/curriculum.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -586,7 +625,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How to use this curriculum</h1>
+                <h1>Research Software Curriculum</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -686,8 +725,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="how-to-use-this-curriculum">
-<h1>How to use this curriculum<a class="headerlink" href="#how-to-use-this-curriculum" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="research-software-curriculum">
+<h1>Research Software Curriculum<a class="headerlink" href="#research-software-curriculum" title="Permalink to this headline">#</a></h1>
 <p>These materials represent a curated curriculum designed to help you develop and maintain your repository and code base. All of the resources listed below are free to access and use, and supplementary material like video lessons has been added where possible and relevant.</p>
 <div class="section" id="bash">
 <h2>Bash<a class="headerlink" href="#bash" title="Permalink to this headline">#</a></h2>
@@ -845,7 +884,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./resources"
+            path: "./training"
         },
         predefinedOutput: true
     }
@@ -859,17 +898,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../software/management_plan.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="courses.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Software management plan</p>
+            <p class="prev-next-title">Courses and workshops</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="courses.html" title="next page">
+    <a class='right-next' id="next-link" href="../community/dcc.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Courses and workshops</p>
+        <p class="prev-next-title">About the DCC</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

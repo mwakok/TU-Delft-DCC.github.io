@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Software management plan &#8212; DCC Guides</title>
+    <title>Software testing &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Software testing" href="testing_intro.html" />
-    <link rel="prev" title="FAIR software checklist" href="checklist.html" />
+    <link rel="next" title="Testing with MATLAB" href="testing_matlab.html" />
+    <link rel="prev" title="Software management plan" href="management_plan.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -235,33 +235,33 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="intro.html">
    FAIR Software
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="checklist.html">
      FAIR software checklist
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="management_plan.html">
      Software management plan
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="testing_intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Software testing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
@@ -449,7 +449,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/software/management_plan.md"
+        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/software/testing_intro.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -477,7 +477,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/software/management_plan.md"
+        <a href="../_sources/software/testing_intro.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -514,23 +514,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-test">
+   What to test?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Software management plan</h1>
+                <h1>Software testing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-test">
+   What to test?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contents">
+   Contents
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -538,8 +585,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="software-management-plan">
-<h1>Software management plan<a class="headerlink" href="#software-management-plan" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="software-testing">
+<h1>Software testing<a class="headerlink" href="#software-testing" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p><em>“Before relying on a new experimental device, an experimental scientist always establishes its accuracy. A new detector is calibrated when the scientist observes its responses to known input signals. The results of this calibration are compared against the expected response.”</em></p>
+<p>[From <a class="reference external" href="https://carpentries-incubator.github.io/python-testing/">Testing and Continuous Integration with Python</a>, created by K. Huff]</p>
+</div></blockquote>
+<p>Simulations and analyses using software should be held to the same standards as experimental measurement devices!</p>
+<p>For a more in depth introduction with motivation on writing tests, see the <a class="reference external" href="https://coderefinery.github.io/testing/motivation/">lesson on testing</a> from the Code Refinery.</p>
+<p>Type of tests:</p>
+<ul class="simple">
+<li><p><strong>Unit test</strong>: testing of individual units of source code (scripts, functions, classes).</p></li>
+<li><p><strong>Integration test</strong>: testing of a combination of individual units as a group.</p></li>
+<li><p><strong>Regression test</strong>: re-running all tests to ensure that the previously developed and tested code still performes after a code change.</p></li>
+</ul>
+<div class="section" id="what-to-test">
+<h2>What to test?<a class="headerlink" href="#what-to-test" title="Permalink to this headline">#</a></h2>
+<p>When writing tests, ask yourself the following questions:</p>
+<ul class="simple">
+<li><p>How would you manually check the correctness of the code?</p></li>
+<li><p>Do you need to scope a particular parameter space?</p></li>
+<li><p>What do you compare the result to?</p></li>
+<li><p>How much time would it take to run the module (and therefore the test)?</p></li>
+</ul>
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testing_matlab.html">Testing with MATLAB</a></li>
+</ul>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -569,17 +646,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="checklist.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="management_plan.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">FAIR software checklist</p>
+            <p class="prev-next-title">Software management plan</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="testing_intro.html" title="next page">
+    <a class='right-next' id="next-link" href="testing_matlab.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Software testing</p>
+        <p class="prev-next-title">Testing with MATLAB</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

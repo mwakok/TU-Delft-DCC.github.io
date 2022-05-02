@@ -142,6 +142,11 @@ const thebe_selector_output = ".output, .cell_output"
      Setup SSL certificates
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="infrastructure/apache_webserver.html">
+     Setting up a web server with Apache
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -179,8 +184,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="data_storage/intro.html">
-   TU Delft storage
+  <a class="reference internal" href="data_fair/intro.html">
+   FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -189,8 +194,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="data_fair/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_storage/intro.html">
+   TU Delft storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
     <a class="reference internal" href="data_storage/project_drive_request.html">
      Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_storage/project_drive_mounting.html">
+     Mount Project Drive on Server
     </a>
    </li>
    <li class="toctree-l2">
@@ -208,11 +235,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="software/fair.html">
-   FAIR for Research Software
+  <a class="reference internal" href="software/intro.html">
+   FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -222,14 +249,36 @@ const thebe_selector_output = ".output, .cell_output"
      FAIR software checklist
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software/management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="software/testing_intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software/testing_matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="git/intro.html">
-   Version control with git
+   Version control with Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -245,8 +294,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="containers/intro.html">
    Working with containers
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,26 +307,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="software/management_plan.html">
-   Software management plan
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="resources/curriculum.html">
-   Research software curriculum
+  <a class="reference internal" href="training/courses.html">
+   Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="resources/courses.html">
-   Courses and workshops
+  <a class="reference internal" href="training/curriculum.html">
+   Research Software Curriculum
   </a>
  </li>
 </ul>
@@ -293,21 +337,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="community/tudelft.html">
-   TU Delft community
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="community/code_of_conduct.html">
    Code of Conduct
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="community/contributing.html">
+  <a class="reference internal" href="community/contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -510,16 +549,16 @@ title="Print to PDF"
 <li><p><strong>Computing Infrastructure</strong> contains information and guides on the TU Delft ICT infrastructure.</p></li>
 <li><p><strong>Data Management</strong> contains information and guides on using TU Delft data storage options and best-practices for FAIR data.</p></li>
 <li><p><strong>Research Software</strong> contains information for creating FAIR research software.</p></li>
-<li><p><strong>Resources</strong> contain a collection of workshops and references.</p></li>
+<li><p><strong>Training</strong> contains a collection of courses, workshops, and references.</p></li>
 </ul>
 <div class="tip full-width admonition">
 <p class="admonition-title">Learn more and get involved</p>
-<p>💡 <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose">Open an issue</a>
-: We track enhancement requests, bug-reports, and to-do items via GitHub issues.</p>
-<p>💬 <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">Join the discussion</a>
-: We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
-<p>🙌 <span class="xref myst">Join the community</span>
-: We welcome anyone to join us in improving our guides. To join, check out our <span class="xref myst">contributing guide</span>.</p>
+<p>💡 <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/issues/new/choose"><strong>Open an issue</strong></a><br />
+We track topic requests and bug-reports via GitHub issues.</p>
+<p>💬 <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>Join the discussion</strong></a><br />
+We have community discussions, talk about ideas, share general questions and develop solutions and feedback in our <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions">community forum</a>.</p>
+<p>🙌 <a class="reference internal" href="community/contribute.html"><span class="doc std std-doc"><strong>Join the community</strong></span></a><br />
+We welcome anyone to join us in improving our guides. To join, check out our <a class="reference internal" href="community/contribute.html"><span class="doc std std-doc">contributing guide</span></a>.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

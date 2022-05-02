@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contributing guidelines &#8212; DCC Guides</title>
+    <title>Prepare data for publishing &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation maintainers" href="maintainers.html" />
-    <link rel="prev" title="Code of Conduct" href="code_of_conduct.html" />
+    <link rel="next" title="Data storage facilities at TU Delft" href="../data_storage/intro.html" />
+    <link rel="prev" title="Getting started" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,6 +143,11 @@ const thebe_selector_output = ".output, .cell_output"
      Setup SSL certificates
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/apache_webserver.html">
+     Setting up a web server with Apache
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -178,13 +183,30 @@ const thebe_selector_output = ".output, .cell_output"
   Data management
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   FAIR data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../data_storage/intro.html">
    TU Delft storage
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -192,6 +214,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../data_storage/project_drive_request.html">
      Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_storage/project_drive_mounting.html">
+     Mount Project Drive on Server
     </a>
    </li>
    <li class="toctree-l2">
@@ -209,11 +236,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../software/fair.html">
-   FAIR for Research Software
+  <a class="reference internal" href="../software/intro.html">
+   FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -223,14 +250,36 @@ const thebe_selector_output = ".output, .cell_output"
      FAIR software checklist
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/management_plan.html">
+     Software management plan
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/testing_intro.html">
+   Software testing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/testing_matlab.html">
+     Testing with MATLAB
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../git/intro.html">
-   Version control with git
+   Version control with Git
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -246,8 +295,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../containers/intro.html">
    Working with containers
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -259,26 +308,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../software/management_plan.html">
-   Software management plan
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Resources
+  Training
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/curriculum.html">
-   Research software curriculum
+  <a class="reference internal" href="../training/courses.html">
+   Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/courses.html">
-   Courses and workshops
+  <a class="reference internal" href="../training/curriculum.html">
+   Research Software Curriculum
   </a>
  </li>
 </ul>
@@ -287,34 +331,29 @@ const thebe_selector_output = ".output, .cell_output"
   Community
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="dcc.html">
+  <a class="reference internal" href="../community/dcc.html">
    About the DCC
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="tudelft.html">
-   TU Delft community
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="code_of_conduct.html">
+  <a class="reference internal" href="../community/code_of_conduct.html">
    Code of Conduct
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../community/contribute.html">
    Contributing guidelines
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="maintainers.html">
+    <a class="reference internal" href="../community/maintainers.html">
      Documentation maintainers
     </a>
    </li>
@@ -410,7 +449,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/community/contributing.md"
+        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/data_fair/publishing.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -438,7 +477,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/community/contributing.md"
+        <a href="../_sources/data_fair/publishing.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -487,7 +526,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Contributing guidelines</h1>
+                <h1>Prepare data for publishing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -499,10 +538,28 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="contributing-guidelines">
-<h1>Contributing guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="prepare-data-for-publishing">
+<h1>Prepare data for publishing<a class="headerlink" href="#prepare-data-for-publishing" title="Permalink to this headline">#</a></h1>
+<p>If you would like to publish your data collection in 4TU.ResearchData or another data repository, it is advisable that you discuss the publishing process, including the reuse and <a class="reference external" href="https://www.tudelft.nl/en/library/research-data-management/r/publish/cite-your-data">citation</a> of the original datasets and appropriate <a class="reference external" href="https://data.4tu.nl/info/en/use/publish-cite/upload-your-data-in-our-data-repository/licencing">licensing</a> options with your faculty <a class="reference external" href="https://www.tudelft.nl/library/research-data-management/r/support/data-stewardship/contact">Data Steward</a>.</p>
+<ul class="simple">
+<li><p>To learn more about research data management, you can participate in an introductory workshop on <a class="reference external" href="https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/research-data-management-101">Research Data Management</a> offered by TU Delft, or review materials from online resources.</p></li>
+<li><p><a class="reference external" href="https://www.fosteropenscience.eu/learning/managing-and-sharing-research-data/#/id/5b2ccc7d7ce0b17553f69063">Managing and Sharing Research Data</a> course from <a class="reference external" href="https://www.fosteropenscience.eu/">FOSTER</a> - e-learning platform that brings together the training resources addressed to those who need to develop strategies and skills for implementing Open Science practices in their daily workflows</p></li>
+<li><p>See a videos on <a class="reference external" href="https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/organising/">best practices</a> on organising data files from <a class="reference external" href="https://ukdataservice.ac.uk/">UK Data Service</a></p></li>
+<li><p>See a <a class="reference external" href="https://mediacentral.princeton.edu/media/How+to+Prepare+Data+for+PublicationA+An+Overview/1_v0who3u4">General guide</a> prepared by <a class="reference external" href="https://researchdata.princeton.edu/">Princeton Research Data Service</a> on how to prepare data for publication as well more detailed videos on:</p>
+<ul>
+<li><p><a class="reference external" href="https://mediacentral.princeton.edu/media/Preparing+Data+for+PublicationA+Readmes+and+Documentation/1_sknb0yn3">READMEs and codebooks </a></p></li>
+<li><p><a class="reference external" href="https://mediacentral.princeton.edu/media/Preparing+Data+for+PublicationA+Discovery+and+Reuse/1_gicf5vb0">Findability and accessibility</a></p></li>
+<li><p><a class="reference external" href="https://mediacentral.princeton.edu/media/Preparing+Data+for+PublicationA+Citing+Data/1_3kvorg8j">Citing data</a></p></li>
+</ul>
+</li>
+</ul>
+<p>To prepare the data, see <a class="reference external" href="https://www.tudelft.nl/en/library/research-data-management/r/manage/collect-and-document">TU Delft Library recommendations</a> regarding data documentation:</p>
+<ul class="simple">
+<li><p>Make sure to include metadata document in the data package. Follow 4TU.ResearchData guide on writing <a class="reference external" href="https://data.4tu.nl/info//fileadmin/user_upload/Documenten/Guidelines_for_creating_a_README_file.pdf">README</a> file.</p></li>
+<li><p>For tabular data, consider creating a <a class="reference external" href="https://ddialliance.org/training/getting-started-new-content/create-a-codebook">code book</a>.</p></li>
+<li><p>Determine whether there is a defined/ preferred metadata standard for your discipline and follow the standard. You can browse through existing standards <a class="reference external" href="https://fairsharing.org/">here</a>.</p></li>
+<li><p>Consider the file format of the data. Data repositories might have preferred file formats, that ensure interoperability  and long-term preservation of the files. See the list of <a class="reference external" href="https://data.4tu.nl/info/fileadmin/user_upload/Documenten/Preferred_File_Formats_2019.pdf">4TU.ResearchData preferred file formats</a> or <a class="reference external" href="https://ukdataservice.ac.uk/learning-hub/research-data-management/format-your-data/recommended-formats/">UK Data Archive recommended and acceptable file formats</a>. The list might vary by repository, so it is important to cross-reference your file formats with the list of recommended formats of the repository of your choice.</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -518,7 +575,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./community"
+            path: "./data_fair"
         },
         predefinedOutput: true
     }
@@ -532,17 +589,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="code_of_conduct.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Code of Conduct</p>
+            <p class="prev-next-title">Getting started</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="maintainers.html" title="next page">
+    <a class='right-next' id="next-link" href="../data_storage/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Documentation maintainers</p>
+        <p class="prev-next-title">Data storage facilities at TU Delft</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
