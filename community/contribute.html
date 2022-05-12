@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,11 +39,11 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -54,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation maintainers" href="maintainers.html" />
-    <link rel="prev" title="Code of Conduct" href="code_of_conduct.html" />
+    <link rel="next" title="Code of Conduct" href="code_of_conduct.html" />
+    <link rel="prev" title="About the DCC" href="dcc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../infrastructure/overview.html">
+  <a class="reference internal" href="../infrastructure/getting_started.html">
    Getting started
   </a>
  </li>
@@ -135,23 +134,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/VPS_SSH.html">
-     SSH Tunneling
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/moving_data.html">
+     Moving data to your server
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/VPS_SSL_Certs.html">
-     Setup SSL certificates
+     Configure SSL certificates
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/apache_webserver.html">
-     Setting up a web server with Apache
+     Setting up an Apache web server
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gitlab/gitlab_intro.html">
+  <a class="reference internal" href="../infrastructure/gitlab/gitlab_intro.html">
    TU Delft GitLab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -161,18 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_groups.html">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_groups.html">
      Creating GitLab groups
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_docker.html">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_docker.html">
      Continuous Integration with Gitlab
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/runner_matlab.html">
-     Gitlab runner for MATLAB
+    <a class="reference internal" href="../infrastructure/gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
     </a>
    </li>
   </ul>
@@ -184,8 +188,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_fair/intro.html">
+  <a class="reference internal" href="../data/fair.html">
    FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -193,7 +202,39 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data/storage_options.html">
+   TU Delft data storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -203,12 +244,17 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../software/intro.html">
+  <a class="reference internal" href="../software/fair.html">
    FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -219,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../software/management_plan.html">
+    <a class="reference internal" href="../software/software_management_plan.html">
      Software management plan
     </a>
    </li>
@@ -229,8 +275,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../software/testing_intro.html">
    Software testing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -243,25 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../git/intro.html">
+  <a class="reference internal" href="../software/git/intro.html">
    Version control with Git
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git/branch_management.html">
-     Branch management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../containers/intro.html">
-   Working with containers
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -270,8 +299,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../containers/docker_users.html">
-     Docker for users
+    <a class="reference internal" href="../software/git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/containers/docker_users.html">
+     Using a docker container with a GUI
     </a>
    </li>
   </ul>
@@ -284,13 +330,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/courses.html">
+  <a class="reference internal" href="../resources/courses.html">
    Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/curriculum.html">
+  <a class="reference internal" href="../resources/curriculum.html">
    Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tools.html">
+   Tools
   </a>
  </li>
 </ul>
@@ -305,27 +356,15 @@ const thebe_selector_output = ".output, .cell_output"
    About the DCC
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contributing guidelines
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="code_of_conduct.html">
    Code of Conduct
   </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   Contributing guidelines
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="maintainers.html">
-     Documentation maintainers
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -400,7 +439,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -417,7 +456,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/community/contribute.md"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/community/contribute.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -482,12 +521,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#welcome">
+   👋 Welcome!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-participate">
+   How to participate
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-moderators-and-maintainers">
+     For moderators and maintainers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-developers">
+   For developers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#developing-and-building-the-guides-locally">
+     Developing and building the guides locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deploying-the-website-in-your-forked-version">
+     Deploying the website in your forked version
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-want-to-make-some-kind-of-change">
+     You want to make some kind of change
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -499,6 +596,53 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#welcome">
+   👋 Welcome!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-participate">
+   How to participate
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-moderators-and-maintainers">
+     For moderators and maintainers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-developers">
+   For developers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#developing-and-building-the-guides-locally">
+     Developing and building the guides locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deploying-the-website-in-your-forked-version">
+     Deploying the website in your forked version
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#you-want-to-make-some-kind-of-change">
+     You want to make some kind of change
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -508,7 +652,85 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="contributing-guidelines">
 <h1>Contributing guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
+<div class="section" id="welcome">
+<h2>👋 Welcome!<a class="headerlink" href="#welcome" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Do you have issues, tips, ideas, events, or questions related to Research Computing, Research Data, and Research Software at TU Delft?</p></li>
+<li><p>Are you a researcher interested in these topics?</p></li>
+<li><p>Do you work and collaborate with researchers on these topics?</p></li>
+</ul>
+<p>We’re using <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions"><strong>GitHub Discussions</strong></a> as a place to connect with other members of our community. We hope that you:</p>
+<ul class="simple">
+<li><p>Ask questions about challenges you encounter</p></li>
+<li><p>Share ideas and solutions</p></li>
+<li><p>Engage with other community members</p></li>
+<li><p>Be welcoming and open-minded. Remember that this is a community we
+build together. See our <a class="reference internal" href="code_of_conduct.html"><span class="doc std std-doc">Code of Conduct</span></a> for more information 💪.</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-participate">
+<h2>How to participate<a class="headerlink" href="#how-to-participate" title="Permalink to this headline">#</a></h2>
+<p>Do you have questions, ideas or ongoing developments on FAIR related aspects, Open Science, training, etc? Would you like to point to specific resources and potential solutions or ideas?</p>
+<ul class="simple">
+<li><p>Use the <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/q-a"><strong>Q&amp;A</strong></a> to ask a question on a specific topic, such as</p>
+<ul>
+<li><p><em>How do I generate a reproducible software development environment?</em></p></li>
+<li><p><em>Where can I find information on creating a Python package?</em></p></li>
+<li><p><em>How should I archive my software?</em></p></li>
+<li><p><em>How do I get started with git?</em></p></li>
+</ul>
+</li>
+<li><p>Use <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/ideas"><strong>Ideas</strong></a> to make proposals, for instance</p>
+<ul>
+<li><p><em>Using jupyter hub for a workshop</em></p></li>
+<li><p><em>Using jupyter books to create educational resources</em></p></li>
+<li><p><em>Running monthly webinars for the community to transfer FAIR practices</em></p></li>
+</ul>
+</li>
+<li><p>Use <a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/solution"><strong>Solutions</strong></a> to point people to existing solutions or share your own. These solutions might end up on our Guides website to share with our community.</p></li>
+<li><p><a class="reference external" href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/discussions/categories/show-and-tell"><strong>Show and tell</strong></a> things you have done that you are proud of and like other to be aware of.</p></li>
+</ul>
+<div class="section" id="for-moderators-and-maintainers">
+<h3>For moderators and maintainers<a class="headerlink" href="#for-moderators-and-maintainers" title="Permalink to this headline">#</a></h3>
+<p>For the maintainers, here are some tips 💡 for getting started with Discussions.</p>
+<p>🔗 If you use issue templates, <strong>link any relevant issue templates</strong> such as questions and community conversations to Discussions. Declutter your issues by driving community content to where they belong in Discussions. If you need help, here’s a <a class="reference external" href="https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser">link to the documentation</a>.</p>
+<p>➡️ You can <strong>convert issues to discussions</strong> either individually or bulk by labels. Looking at you, issues labeled “question” or “discussion”.</p>
+</div>
+</div>
+<div class="section" id="for-developers">
+<h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">#</a></h2>
+<div class="section" id="developing-and-building-the-guides-locally">
+<h3>Developing and building the guides locally<a class="headerlink" href="#developing-and-building-the-guides-locally" title="Permalink to this headline">#</a></h3>
+<ol>
+<li><p>Fork the repository to your own Github profile</p></li>
+<li><p>Clone the repository</p></li>
+<li><p>Create a conda environment in the terminal with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">build.sh</span></code> to generate the documentation</p></li>
+<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">./_build/html/</span></code> folder and open the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file. This should open the website in your browser.</p></li>
+</ol>
+</div>
+<div class="section" id="deploying-the-website-in-your-forked-version">
+<h3>Deploying the website in your forked version<a class="headerlink" href="#deploying-the-website-in-your-forked-version" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Fork the repository to your own Github profile</p></li>
+<li><p>In your forked repository, under <strong>Settings -&gt; Pages</strong> set Source to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> and <code class="docutils literal notranslate"><span class="pre">/(root)</span></code> and press <strong>Save</strong></p></li>
+<li><p>Either commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to <strong>Actions -&gt; Deploy guides</strong> and press <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">workflow</span></code> and <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">workflow</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="you-want-to-make-some-kind-of-change">
+<h3>You want to make some kind of change<a class="headerlink" href="#you-want-to-make-some-kind-of-change" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>(<strong>important</strong>) announce your plan to the rest of the community <em>before you start working</em>. This announcement should be in the form of a (new) issue;</p></li>
+<li><p>(<strong>important</strong>) wait until some kind of consensus is reached about your idea being a good idea;</p></li>
+<li><p>if needed, fork the repository to your own Github profile and create your own feature branch off of the latest master commit. While working on your feature branch, make sure to stay up to date with the master branch by pulling in changes, possibly from the ‘upstream’ repository (follow the instructions <a class="reference external" href="https://help.github.com/articles/configuring-a-remote-for-a-fork/">here</a> and <a class="reference external" href="https://help.github.com/articles/syncing-a-fork/">here</a>);</p></li>
+<li><p><a class="reference external" href="http://rogerdudler.github.io/git-guide/%3E">push</a> your feature branch to (your fork of) the DCC guides repository on GitHub;</p></li>
+<li><p>create the pull request, e.g. following the instructions <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">here</a>. If needed, provide a link to the gh-pages in your forked repository: <code class="docutils literal notranslate"><span class="pre">https://&lt;your-username&gt;.github.io/TU-Delft-DCC.github.io/</span></code>.</p></li>
+</ol>
+</div>
 </div>
 </div>
 
@@ -539,17 +761,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="code_of_conduct.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="dcc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Code of Conduct</p>
+            <p class="prev-next-title">About the DCC</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="maintainers.html" title="next page">
+    <a class='right-next' id="next-link" href="code_of_conduct.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Documentation maintainers</p>
+        <p class="prev-next-title">Code of Conduct</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

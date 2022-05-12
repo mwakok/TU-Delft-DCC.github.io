@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,11 +39,11 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -54,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Version control with Git" href="../git/intro.html" />
+    <link rel="next" title="Version control with Git" href="git/intro.html" />
     <link rel="prev" title="Software testing" href="testing_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../infrastructure/overview.html">
+  <a class="reference internal" href="../infrastructure/getting_started.html">
    Getting started
   </a>
  </li>
@@ -135,23 +134,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/VPS_SSH.html">
-     SSH Tunneling
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../infrastructure/moving_data.html">
+     Moving data to your server
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/VPS_SSL_Certs.html">
-     Setup SSL certificates
+     Configure SSL certificates
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../infrastructure/apache_webserver.html">
-     Setting up a web server with Apache
+     Setting up an Apache web server
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gitlab/gitlab_intro.html">
+  <a class="reference internal" href="../infrastructure/gitlab/gitlab_intro.html">
    TU Delft GitLab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -161,18 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_groups.html">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_groups.html">
      Creating GitLab groups
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_docker.html">
+    <a class="reference internal" href="../infrastructure/gitlab/gitlab_docker.html">
      Continuous Integration with Gitlab
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/runner_matlab.html">
-     Gitlab runner for MATLAB
+    <a class="reference internal" href="../infrastructure/gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
     </a>
    </li>
   </ul>
@@ -184,8 +188,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_fair/intro.html">
+  <a class="reference internal" href="../data/fair.html">
    FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -193,7 +202,39 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data/storage_options.html">
+   TU Delft data storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -203,12 +244,17 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="fair.html">
    FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -219,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="management_plan.html">
+    <a class="reference internal" href="software_management_plan.html">
      Software management plan
     </a>
    </li>
@@ -229,8 +275,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="testing_intro.html">
    Software testing
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -243,25 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../git/intro.html">
+  <a class="reference internal" href="git/intro.html">
    Version control with Git
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git/branch_management.html">
-     Branch management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../containers/intro.html">
-   Working with containers
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -270,8 +299,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../containers/docker_users.html">
-     Docker for users
+    <a class="reference internal" href="git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers/docker_users.html">
+     Using a docker container with a GUI
     </a>
    </li>
   </ul>
@@ -284,13 +330,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/courses.html">
+  <a class="reference internal" href="../resources/courses.html">
    Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/curriculum.html">
+  <a class="reference internal" href="../resources/curriculum.html">
    Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tools.html">
+   Tools
   </a>
  </li>
 </ul>
@@ -306,26 +357,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../community/code_of_conduct.html">
-   Code of Conduct
-  </a>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="../community/contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../community/maintainers.html">
-     Documentation maintainers
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/code_of_conduct.html">
+   Code of Conduct
+  </a>
  </li>
 </ul>
 
@@ -400,7 +439,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -417,7 +456,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/software/testing_matlab.md"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/software/testing_matlab.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -555,7 +594,7 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="testing-with-matlab">
 <h1>Testing with MATLAB<a class="headerlink" href="#testing-with-matlab" title="Permalink to this headline">#</a></h1>
-<p>In this guide, we will discuss writing and running tests with Matlab. See the <a class="reference external" href="https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html">documentation from Matlab</a> for more information</p>
+<p>In this guide, we will discuss writing and running tests with Matlab. See the <a class="reference external" href="https://nl.mathworks.com/help/matlab/matlab-unit-test-framework.html">documentation from Matlab</a> for more information.</p>
 <div class="section" id="writing-tests">
 <h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">#</a></h2>
 <p>Tests should be kept separate from the code base, usually in a folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. The naming convention for writing a test for a particular MATLAB script is to prefix “test_” to the name of the script that is being tested. For example, a test for the file <code class="docutils literal notranslate"><span class="pre">draw_random_number.m</span></code> should be called <code class="docutils literal notranslate"><span class="pre">test_draw_random_number.m</span></code>. In general, Matlab will recognize any scripts that are prefixed or suffixed with the string “test” as tests.</p>
@@ -635,7 +674,7 @@ title="Print to PDF"
 </div>
 <div class="section" id="executing-tests">
 <h2>Executing tests<a class="headerlink" href="#executing-tests" title="Permalink to this headline">#</a></h2>
-<p>We make use of a test function called <code class="docutils literal notranslate"><span class="pre">run_testsuite.m</span></code>. This function allow the creation of test reports and selectively running test through TestTags. In the example above, we added the tag ‘Unit’.</p>
+<p>We will create a Matlab script called <code class="docutils literal notranslate"><span class="pre">run_testsuite.m</span></code> in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code>. This function can run the tests present in the folder <code class="docutils literal notranslate"><span class="pre">tests/</span></code> and can create test reports.</p>
 <div class="toggle docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>result<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">run_testsuite</span><span class="p">(</span>varargin<span class="p">)</span><span class="w"></span>
 <span class="c">%RUNTESTS - Run all tests and produce coverage report</span><span class="w"></span>
@@ -830,9 +869,16 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<p>You can then call the function in the MATLAB command window to run all tests with the tag ‘Unit’ with</p>
+<p>Additionally, we can selectively run test by defining TestTags. In the example above, we added the tag ‘Unit’. You can then call the function in the MATLAB command window to run all tests with the tag ‘Unit’ with</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">run_testsuite</span><span class="p">(</span><span class="s">&#39;TestTag&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Unit&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to quickly check whether your tests pass without having to start up Matlab, you can also call <code class="docutils literal notranslate"><span class="pre">run_testsuite</span></code> from the terminal. In the folder containing the function, execute</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>matlab -batch <span class="s2">&quot;run_testsuite(&#39;TestTag&#39;, &#39;Unit&#39;)&quot;</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -871,7 +917,7 @@ title="Print to PDF"
             <p class="prev-next-title">Software testing</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../git/intro.html" title="next page">
+    <a class='right-next' id="next-link" href="git/intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Version control with Git</p>

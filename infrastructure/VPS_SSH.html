@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SSH Tunneling &#8212; DCC Guides</title>
+    <title>Configure SSH Tunneling &#8212; DCC Guides</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -40,11 +39,11 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -54,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Setup SSL certificates" href="VPS_SSL_Certs.html" />
+    <link rel="next" title="Moving data to your server" href="moving_data.html" />
     <link rel="prev" title="Request a Virtual Private Server" href="VPS_request.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,7 +113,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="overview.html">
+  <a class="reference internal" href="getting_started.html">
    Getting started
   </a>
  </li>
@@ -135,23 +134,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     SSH Tunneling
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="moving_data.html">
+     Moving data to your server
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="VPS_SSL_Certs.html">
-     Setup SSL certificates
+     Configure SSL certificates
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="apache_webserver.html">
-     Setting up a web server with Apache
+     Setting up an Apache web server
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../gitlab/gitlab_intro.html">
+  <a class="reference internal" href="gitlab/gitlab_intro.html">
    TU Delft GitLab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -161,18 +165,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_groups.html">
+    <a class="reference internal" href="gitlab/gitlab_groups.html">
      Creating GitLab groups
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/gitlab_docker.html">
+    <a class="reference internal" href="gitlab/gitlab_docker.html">
      Continuous Integration with Gitlab
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../gitlab/runner_matlab.html">
-     Gitlab runner for MATLAB
+    <a class="reference internal" href="gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
     </a>
    </li>
   </ul>
@@ -184,8 +188,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../data_fair/intro.html">
+  <a class="reference internal" href="../data/fair.html">
    FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -193,7 +202,39 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data/storage_options.html">
+   TU Delft data storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data/sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -203,12 +244,17 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../software/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../software/intro.html">
+  <a class="reference internal" href="../software/fair.html">
    FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -219,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../software/management_plan.html">
+    <a class="reference internal" href="../software/software_management_plan.html">
      Software management plan
     </a>
    </li>
@@ -229,8 +275,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../software/testing_intro.html">
    Software testing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -243,25 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../git/intro.html">
+  <a class="reference internal" href="../software/git/intro.html">
    Version control with Git
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git/branch_management.html">
-     Branch management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../containers/intro.html">
-   Working with containers
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -270,8 +299,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../containers/docker_users.html">
-     Docker for users
+    <a class="reference internal" href="../software/git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/containers/docker_users.html">
+     Using a docker container with a GUI
     </a>
    </li>
   </ul>
@@ -284,13 +330,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/courses.html">
+  <a class="reference internal" href="../resources/courses.html">
    Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../training/curriculum.html">
+  <a class="reference internal" href="../resources/curriculum.html">
    Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/tools.html">
+   Tools
   </a>
  </li>
 </ul>
@@ -306,26 +357,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../community/code_of_conduct.html">
-   Code of Conduct
-  </a>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="../community/contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../community/maintainers.html">
-     Documentation maintainers
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../community/code_of_conduct.html">
+   Code of Conduct
+  </a>
  </li>
 </ul>
 
@@ -400,7 +439,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -417,7 +456,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git/edit/master/docs/infrastructure/VPS_SSH.md"
+        <a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io/edit/master/docs/infrastructure/VPS_SSH.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -504,49 +543,15 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   SSH Tunneling
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+   Set a Default SSH Tunneling for a Host (Linux Terminal)
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
-     Set a Default SSH Tunneling for a Host (Linux Terminal)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tunneling-with-winscp">
-     Tunneling with WinSCP
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#moving-data-around">
-   Moving Data Around
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tunneling-with-winscp">
+   Tunneling with WinSCP
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-from-client-to-host-using-proxycommand">
-     Copy Data from Client to Host using ProxyCommand
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-from-host-to-client-using-proxycommand">
-     Copy Data from Host to Client using ProxyCommand
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-using-ssh-tunneling">
-     Copy Data using SSH Tunneling
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
-     scp with sudo files from a remote host to another remote host
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -557,7 +562,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>SSH Tunneling</h1>
+                <h1>Configure SSH Tunneling</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -567,49 +572,15 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   SSH Tunneling
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
+   Set a Default SSH Tunneling for a Host (Linux Terminal)
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal">
-     Set a Default SSH Tunneling for a Host (Linux Terminal)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tunneling-with-winscp">
-     Tunneling with WinSCP
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#moving-data-around">
-   Moving Data Around
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tunneling-with-winscp">
+   Tunneling with WinSCP
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-from-client-to-host-using-proxycommand">
-     Copy Data from Client to Host using ProxyCommand
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-from-host-to-client-using-proxycommand">
-     Copy Data from Host to Client using ProxyCommand
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copy-data-using-ssh-tunneling">
-     Copy Data using SSH Tunneling
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
-     scp with sudo files from a remote host to another remote host
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -621,8 +592,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ssh-tunneling">
-<h1>SSH Tunneling<a class="headerlink" href="#ssh-tunneling" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="configure-ssh-tunneling">
+<h1>Configure SSH Tunneling<a class="headerlink" href="#configure-ssh-tunneling" title="Permalink to this headline">#</a></h1>
 <p>To connect to a remote host, TU Delft uses a <em>proxy server</em>, know as  <strong>bastion</strong>. Thefore, to reach a remote host, a user has to connect first to the <strong>bastion</strong> and from there to the remote host, e.g., <em><a class="reference external" href="http://my-vm.tudelft.nl">my-vm.tudelft.nl</a></em>. However, a user can connect directly to the remote host using <em>ssh tunneling</em>.</p>
 <div class="section" id="set-a-default-ssh-tunneling-for-a-host-linux-terminal">
 <h2>Set a Default SSH Tunneling for a Host (Linux Terminal)<a class="headerlink" href="#set-a-default-ssh-tunneling-for-a-host-linux-terminal" title="Permalink to this headline">#</a></h2>
@@ -662,40 +633,6 @@ title="Print to PDF"
 <p>If using winscp, you will find detailed information here: <a class="reference external" href="https://winscp.net/eng/docs/ui_login_tunnel">https://winscp.net/eng/docs/ui_login_tunnel</a></p>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="moving-data-around">
-<h1>Moving Data Around<a class="headerlink" href="#moving-data-around" title="Permalink to this headline">#</a></h1>
-<div class="section" id="copy-data-from-client-to-host-using-proxycommand">
-<h2>Copy Data from Client to Host using ProxyCommand<a class="headerlink" href="#copy-data-from-client-to-host-using-proxycommand" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;my-local-file&gt;  &lt;target-username&gt;@&lt;target-host&gt;:/&lt;remote-directory&gt;/
-</pre></div>
-</div>
-</div>
-<div class="section" id="copy-data-from-host-to-client-using-proxycommand">
-<h2>Copy Data from Host to Client using ProxyCommand<a class="headerlink" href="#copy-data-from-host-to-client-using-proxycommand" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ scp -o <span class="s2">&quot;ProxyCommand ssh -W %h:%p &lt;bastion-username&gt;@linux-bastion-ex.tudelft.nl&quot;</span> &lt;target-username&gt;@&lt;target-host&gt;:/tmp/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/
-</pre></div>
-</div>
-</div>
-<div class="section" id="copy-data-using-ssh-tunneling">
-<h2>Copy Data using SSH Tunneling<a class="headerlink" href="#copy-data-using-ssh-tunneling" title="Permalink to this headline">#</a></h2>
-<p>If a default <a class="reference external" href="##ssh-tunneling">ssh tunneling</a> was configured correctly. Data can be copied to and from a remote host as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy TO Remote Host</span>
-$ scp &lt;my-local-file&gt; &lt;host-nickname&gt;:/&lt;remote-directory&gt;/
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy FROM Remote Host</span>
-$ scp &lt;host-nickname&gt;:/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/ 
-</pre></div>
-</div>
-</div>
-<div class="section" id="scp-with-sudo-files-from-a-remote-host-to-another-remote-host">
-<h2>scp with sudo files from a remote host to another remote host<a class="headerlink" href="#scp-with-sudo-files-from-a-remote-host-to-another-remote-host" title="Permalink to this headline">#</a></h2>
-<p>“-C /tmp/a” can be used when you wanted to “cd /tmp/a”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">source</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span> <span class="n">sudo</span> <span class="n">tar</span> <span class="n">cf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">a</span> <span class="o">.</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">target</span><span class="o">.</span><span class="n">tudelft</span><span class="o">.</span><span class="n">nl</span>  <span class="n">sudo</span> <span class="n">tar</span> <span class="n">xvf</span> <span class="o">-</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">b</span><span class="o">/</span>
-</pre></div>
-</div>
-</div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -731,10 +668,10 @@ $ scp &lt;host-nickname&gt;:/&lt;my-remote-file&gt; /&lt;my-local-directory&gt;/
             <p class="prev-next-title">Request a Virtual Private Server</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="VPS_SSL_Certs.html" title="next page">
+    <a class='right-next' id="next-link" href="moving_data.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Setup SSL certificates</p>
+        <p class="prev-next-title">Moving data to your server</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

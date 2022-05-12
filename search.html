@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -46,7 +45,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script src="_static/tabs.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -119,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="infrastructure/overview.html">
+  <a class="reference internal" href="infrastructure/getting_started.html">
    Getting started
   </a>
  </li>
@@ -140,23 +138,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="infrastructure/VPS_SSH.html">
-     SSH Tunneling
+     Configure SSH Tunneling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="infrastructure/moving_data.html">
+     Moving data to your server
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="infrastructure/VPS_SSL_Certs.html">
-     Setup SSL certificates
+     Configure SSL certificates
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="infrastructure/apache_webserver.html">
-     Setting up a web server with Apache
+     Setting up an Apache web server
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="gitlab/gitlab_intro.html">
+  <a class="reference internal" href="infrastructure/gitlab/gitlab_intro.html">
    TU Delft GitLab
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -166,18 +169,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="gitlab/gitlab_groups.html">
+    <a class="reference internal" href="infrastructure/gitlab/gitlab_groups.html">
      Creating GitLab groups
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gitlab/gitlab_docker.html">
+    <a class="reference internal" href="infrastructure/gitlab/gitlab_docker.html">
      Continuous Integration with Gitlab
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gitlab/runner_matlab.html">
-     Gitlab runner for MATLAB
+    <a class="reference internal" href="infrastructure/gitlab/runner_matlab.html">
+     Setting up a Gitlab runner for MATLAB
     </a>
    </li>
   </ul>
@@ -189,8 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="data_fair/intro.html">
+  <a class="reference internal" href="data/fair.html">
    FAIR data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -198,7 +206,39 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data/publishing.html">
+     Prepare data for publishing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data/storage_options.html">
+   TU Delft data storage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data/project_drive_request.html">
+     Request Project Drive space
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data/project_drive_mounting.html">
+     Mount Project Drive on Server
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data/sync_unison.html">
+     Sync with Project Drive and SURFDrive with Unison
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -208,12 +248,17 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="software/getting_started.html">
+   Getting started
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="software/intro.html">
+  <a class="reference internal" href="software/fair.html">
    FAIR Software
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -224,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="software/management_plan.html">
+    <a class="reference internal" href="software/software_management_plan.html">
      Software management plan
     </a>
    </li>
@@ -234,8 +279,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="software/testing_intro.html">
    Software testing
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -248,25 +293,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="git/intro.html">
+  <a class="reference internal" href="software/git/intro.html">
    Version control with Git
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="git/branch_management.html">
-     Branch management
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="containers/intro.html">
-   Working with containers
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
@@ -275,8 +303,25 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="containers/docker_users.html">
-     Docker for users
+    <a class="reference internal" href="software/git/branch_management.html">
+     Branch management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="software/containers/intro.html">
+   Working with containers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software/containers/docker_users.html">
+     Using a docker container with a GUI
     </a>
    </li>
   </ul>
@@ -289,13 +334,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="training/courses.html">
+  <a class="reference internal" href="resources/courses.html">
    Courses and workshops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="training/curriculum.html">
+  <a class="reference internal" href="resources/curriculum.html">
    Research Software Curriculum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources/tools.html">
+   Tools
   </a>
  </li>
 </ul>
@@ -311,26 +361,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="community/code_of_conduct.html">
-   Code of Conduct
-  </a>
- </li>
- <li class="toctree-l1 has-children">
   <a class="reference internal" href="community/contribute.html">
    Contributing guidelines
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="community/maintainers.html">
-     Documentation maintainers
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="community/code_of_conduct.html">
+   Code of Conduct
+  </a>
  </li>
 </ul>
 
@@ -396,7 +434,7 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/mwakok/TU-Delft-DCC.github.io.git"
+<a href="https://github.com/TU-Delft-DCC/TU-Delft-DCC.github.io"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="bottom"
