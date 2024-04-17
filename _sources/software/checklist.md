@@ -20,7 +20,7 @@ _Essential_
 - [ ] Upload your project on [GitHub](https://github.com/) or [TU Delft GitLab](https://gitlab.tudelft.nl/)
 
 _Recommended_  
-- [ ] Make your repository [public](https://coderefinery.github.io/social-coding/social_coding/)
+- [ ] Make your repository [public](https://coderefinery.github.io/social-coding/)
 - [ ] [Branch hygiene](https://coderefinery.github.io/git-branch-design/)
 - [ ] Use a branching model ([GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow))
 - [ ] [Meaningful commit messages](https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines)
@@ -53,7 +53,7 @@ _Recommended_
 
 ### Testing
 _Recommended_  
-- [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html)
+- [ ] [Defensive programming](https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html)
 - [ ] Test your software with [integration tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-integrationtest.html) and [unit tests](https://the-turing-way.netlify.app/reproducible-research/testing/testing-unittest.html)
 - [ ] User installation test
 - [ ] Make use of [Continuous Integration](https://the-turing-way.netlify.app/reproducible-research/ci/ci-options.html)
@@ -62,20 +62,20 @@ _Recommended_
 
 ### Releases
 _Essential_  
-- [ ] Obtain a DOI ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/en/))
+- [ ] Obtain a DOI ([Zenodo](https://zenodo.org/) or [4TU.ResearchData](https://data.4tu.nl/info/about-your-data/getting-started))
 
 _Recommended_  
 - [ ] [Semantic versioning](https://semver.org/)
 - [ ] Tagged releases ([GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github))
 - [ ] [CHANGELOG](https://keepachangelog.com/en/1.0.0/)
-- [ ] Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [conda](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html), [DockerHub](https://docs.docker.com/docker-hub/repos/#:~:text=To%20push%20an%20image%20to,docs%2Fbase%3Atesting%20))
+- [ ] Upload to registry ([PyPI](https://realpython.com/pypi-publish-python-package/), [conda](https://conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html), [DockerHub](https://docs.docker.com/docker-hub/repos/))
 - [ ] [Release guide](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 - [ ] Continuous Integration for build and release
 
 ### Code quality
 _Essential_
-- [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/02-organizing-projects/)
-- [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/03-dependencies/)
+- [ ] Project [organisation](https://coderefinery.github.io/reproducible-research/organizing-projects/)
+- [ ] Record [software dependencies](https://coderefinery.github.io/reproducible-research/dependencies/)
 
 _Recommended_
 - [ ] Follow [PEP8 guidelines](https://realpython.com/python-pep8/)

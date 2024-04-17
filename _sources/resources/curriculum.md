@@ -22,15 +22,15 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Intro to version control with Git from Code Refinery](https://coderefinery.github.io/git-intro/) – self-paced introductory lesson to version control using Git
 * [Git Intro video lesson from Code Refinery - Day 1](https://www.youtube.com/watch?v=QcwQ8jeaHmc) - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 1/2
 * [Git Intro video lesson from Code Refinery - Day 2](https://www.youtube.com/watch?v=MeHB_Fjssjw) - Recorded lesson from a May 2021 Code Refinery workshop on material in Intro to version control with Git, part 2/2
-* [Branching and merging](https://coderefinery.github.io/git-intro/06-branches/) – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)
-* [What is .gitignore?](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/#:~:text=The%20.,to%20ignore%20in%20a%20project.&text=gitignore%20file%20is%20usually%20placed,all%20of%20your%20Git%20repositories.) – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)
+* [Branching and merging](https://coderefinery.github.io/git-intro/branches/) – lesson from Code Refinery on concept of branching in Git (featuring octopus diagram)
+* [What is .gitignore?](https://www.freecodecamp.org/news/gitignore-what-is-it-and-how-to-add-to-repo/) – introduction to how and why to use the .gitignore file to not track some files in a project folder (e.g., because of their size or sensitivity)
 * [Git command cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet) – commonly used Git commands in one page that can also be downloaded
 
 ## GitHub/GitLab (remote repositories)
 * [Understanding the GitHub flow](https://guides.github.com/introduction/flow/) – guide from GitHub on how and why to work with branches
 * [Collaborative distributed version control](https://coderefinery.github.io/git-collaborative/) - We have learned how to make a git repository for a single person. What about sharing?
 * [SSH connection to GitHub](https://coderefinery.github.io/installation/ssh/) – instructions to set up SSH connection to GitHub so that you do not need to input your login credentials with every push/pull
-* [Gitlab and SSH keys](https://docs.gitlab.com/ee/ssh/) - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above
+* [Gitlab and SSH keys](https://docs.gitlab.com/ee/user/ssh.html) - instructions to add an SSH key to your (TU Delft) GitLab account for the same reason as above
 * [GitHub without the Command Line from Code Refinery](https://coderefinery.github.io/github-without-command-line/) - practice collaborating and sharing using either the GitHub website or GitHub desktop application
 * [GitHub Guides: Mastering Markdown](https://guides.github.com/features/mastering-markdown/) - Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
 
@@ -39,12 +39,12 @@ These materials represent a curated curriculum designed to help you develop and 
 
 ## Anaconda Navigator and managing conda environments
 * [Anaconda Installation Guide from Software Carpentries](https://carpentries.github.io/workshop-template/#python) - Although one can install a plain-vanilla Python and all required libraries by hand, we recommend installing Anaconda, a Python distribution that comes with the latest version of Python and Jupyter Notebooks by default
-* [Intro to Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/getting-started/) - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands
+* [Intro to Anaconda Navigator](https://docs.anaconda.com/free/navigator/getting-started/) - Anaconda Navigator is a graphical user interface to the conda package and environment manager. This 10-minute guide to Navigator will have you navigating the powerful conda program in a web-like interface without having to learn command line commands
 * [Introduction to Conda for (Data) Scientists](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/) -  Conda is an open source package and environment management system that easily creates, saves, loads, and switches between environments on your local computer
 * [Managing Conda environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) - documentation on performing a range of common tasks with Conda using the command line
 
 ## Python
-* [Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/#python-for-everybody) - a free video course series that teaches the basics of using Python 3
+* [Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) - a free video course series that teaches the basics of using Python 3
 * [Applied Data Science with Python Specialization](https://www.coursera.org/specializations/data-science-python?utm_source=gg&utm_medium=sem&utm_campaign=29-AppliedDataSciencePython-ROW&utm_content=29-AppliedDataSciencePython-ROW&campaignid=13259947800&adgroupid=117959621210&device=c&keyword=introduction%20to%20python&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=524072187253&hide_mobile_promo&gclid=CjwKCAjwjdOIBhA_EiwAHz8xmzgKFVlySbCes2TmwDAB08gMJM3xW3QfOXp3NjVhym45aLS3nbCaFBoC3LEQAvD_BwE) - Coursera course in which you can enroll for free 
 * [LearnPython.org](https://www.learnpython.org/) - Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language
 * [Programming with Python from Software Carpentries](https://swcarpentry.github.io/python-novice-inflammation/) - this introduction to Python is built around a common scientific task: data analysis
@@ -57,7 +57,7 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp) - 14-part tutorial series featuring live code examples and tests of your knowledge
 * [Pandas Data Wrangling Cheat Sheet](https://towardsdatascience.com/pandas-data-wrangling-cheat-sheet-2021-cf70f577bcdd) - to excel data analysis/data science/machine learning in Python, Pandas is a library you need to master. Here is a cheat sheet of some of the most used syntax that you probably don’t want to miss
 * [Pandas Cheat Sheet - Visual](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) - visual, printable 2-page reference guide on commonly performed operations using Pandas
-* [Ultimate Pandas Guide — Inspecting Data Like a Pro](https://towardsdatascience.com/ultimate-pandas-guide-inspecting-data-like-a-pro-9b4f13c39c94) - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive
+* [Ultimate Pandas Guide — Inspecting Data Like a Pro](https://medium.com/towards-data-science/ultimate-pandas-guide-inspecting-data-like-a-pro-9b4f13c39c94) - Whether you’re working on a simple analysis or a complex machine learning model, there’s a lot of value in being able to answer quick, exploratory questions about the nature of your data. This is a walk through of several DataFrame attributes and methods that make data inspection painless and productive
 * [10 Efficient Ways for Inspecting a Pandas DataFrame Object](https://medium.com/codex/10-efficient-ways-for-inspecting-a-pandas-dataframe-object-3f66563e2f2) - A guide to using pandas effectively and efficiently
 
 ## Plotly
@@ -77,13 +77,13 @@ These materials represent a curated curriculum designed to help you develop and 
 * [R for Social Scientists](https://datacarpentry.org/r-socialsci/) - basic information about R syntax, the RStudio interface, how to import CSV files, the structure of data frames, how to deal with factors, how to add/remove rows and columns, how to calculate summary statistics from a data frame, and a brief introduction to plotting
 
 ## MATLAB
-* [Using git with MATLAB](https://admin.kuleuven.be/icts/onderzoek/wetsoft/software/matlab/pdf/versioning-git-matlab.pdf) - Introduciton into using MATLAB and version control with git 
+* [Using git with MATLAB](https://admin.kuleuven.be/icts/onderzoek/wetsoft/software/matlab/pdf/versioning-git-matlab.pdf) - Introduction into using MATLAB and version control with git 
 * [Programming with MATLAB](http://swcarpentry.github.io/matlab-novice-inflammation/) - Lesson from the Software Carpentries on the basics of programming with MATLAB
 
 ## Modular Code and testing
 * [Writing tests](https://coderefinery.github.io/testing/) - lesson from CodeRefinery on automated testing
 * [Video testing lesson](https://www.youtube.com/watch?v=s72AqTTi_Y8) - recording from software testing workshop by Code Refinery
-* [Modular coding](http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/#1) - slides on modular code from Code Refinery
+* [Modular coding](http://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md) - slides on modular code from Code Refinery
 
 ## Docker
 * [Installing Docker](https://docs.docker.com/get-docker/) - installation instructions for Windows, macOS, and Linux
@@ -94,9 +94,9 @@ These materials represent a curated curriculum designed to help you develop and 
 * [Setting up VSCode for Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode) - guide to getting started using VSCode with Windows Subsystem for Linux
 
 ## Continuous Integration
-* [GitHub Actions introduction course](https://lab.github.com/githubtraining/github-actions:-hello-world) - an introductory course from GitHub on how to use GitHub Actions
+* [GitHub Actions introduction course](https://github.com/skills/hello-github-actions) - an introductory course from GitHub on how to use GitHub Actions
 
 ## Reproducible Research
 * [Reproducible Research material from Code Refinery](https://coderefinery.github.io/reproducible-research/) - demonstrates how version control, workflows, containers, and package managers can be used to record reproducible environments and computational steps
 * [Reproducible Research video lesson from Code Refinery](https://www.youtube.com/watch?v=MxZF1gEJoWw) - Recorded video lesson from Code Refinery workshop in May 2021 on Reproducible Research material
-* [Data + Code + Software = PDF](https://zenodo.org/record/5508797#.YUHu0bj7RjU) - Slides to an overview on how to integrate data and software into a PDF.
+* [Data + Code + Software = PDF](https://zenodo.org/record/5508797) - Slides to an overview on how to integrate data and software into a PDF.

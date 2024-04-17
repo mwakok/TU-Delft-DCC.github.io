@@ -3,22 +3,112 @@
 ## Training for researchers at the TU Delft
 The TU Delft organises courses for researchers on data management, research software development, and open science. For an overview of available courses, please visit the [website](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers).
 
+:::{panels}
+:column: col-lg-6 p-2
+:card: shadow
+:header: bg-warning
+:footer: bg-white
+:img-top-cls: pl-5 pr-5
 
-### The Carpentries
-The Carpentries teaches foundational coding and data science skills to researchers worldwide. All members of the DCC are involved as certified instructors for the [Carpentries](https://carpentries.org/become-instructor/).
+**The Carpentries**
+^^^
+[The Carpentries](https://carpentries.org/) teaches foundational coding and data science skills to researchers worldwide. You can also sign up as a helper.
 
-### Code Refinery
-[CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. It currently focuses mostly on the Nordic/Baltic countries, but invites collaboratio with the TU Delft as well. CodeRefinery aims to operate as a community project with support from academic organizations. TU Delft researchers can sign up through the [TU Delft library](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers).
+- [Software Carpentry](https://software-carpentry.org/lessons/)
+- [Data Carpentry](https://datacarpentry.org/lessons/)
+- [Library Carpentry](https://librarycarpentry.org/lessons/)
 
-### eScience Center
-The eScience Center offers has open-source [training materials](https://www.esciencecenter.nl/training-materials/) available and offers regular [workshops](https://www.esciencecenter.nl/digital-skills/).
++++
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers
+:classes: btn-primary btn-block stretched-line text-white
+:text: Sign up
+```
+---
 
-### SURF
-SURF offers various [workshops](https://www.surf.nl/en/training-courses-for-research) for researchers. Please learn more about upcoming workshops through their [event agenda](https://www.surf.nl/en/agenda/research-and-ict).
+**CodeRefinery**
+^^^
+[CodeRefinery](https://coderefinery.org/) acts as a hub for FAIR (Findable, Accessible, Interoperable, and Reusable) software practices. The main focus is on professional tools for efficiently writing and maintaining research software, focussed on open source software. You can also sign up as a helper.
+
++++
+```{link-button} https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/coderefinery-workshops
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Sign up
+```
+
+---
+**eScience Center**
+^^^
+[The eScience Center](https://www.esciencecenter.nl/) offers has open-source [training materials](https://www.esciencecenter.nl/training-materials/) available and offers regular workshops.
+
++++
+```{link-button} https://www.esciencecenter.nl/events/?f=workshops
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Upcoming events
+```
+
+---
+**DCSE**
+^^^
+The [Delft Institute for Computational Science and Engineering](https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering) offers courses on supercomputing through the [Delft High Performance Computing Center](https://www.tudelft.nl/en/dhpc). 
+
++++
+```{link-button} https://www.tudelft.nl/en/tu-delft-institute-for-computational-science-and-engineering/education/courses
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Course list
+```
+
+---
+**SURF**
+^^^
+SURF offers various [workshops](https://www.surf.nl/en/training-courses-for-research) for researchers. 
+
++++
+```{link-button} https://www.surf.nl/en/agenda/research-and-ict
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Upcoming events
+```
+:::
 
 
-## Software Sustainability Institute
-Since 2010, the Software Sustainability Institute has facilitated the advancement of software in research by cultivating better, more sustainable, research software to enable world-class research (“Better software, better research”). The Institute is based at the Universities of Edinburgh, Manchester, Oxford and Southampton, and draws on a team of experts with a breadth of experience in software development, project and programme management, research facilitation, publicity and community engagement.
+### Community initiatives
+:::{panels}
+:column: col-lg-6 p-2
+:card: shadow
+:header: bg-warning
+:footer: bg-white
+:img-top-cls: pl-5 pr-5
+
+:img-top: ../img/R_cafe_logo_small.png
+
+Do you want to build your R skills, write R code with others, or ask questions about working with R? To join the [TU Delft R Café](https://delft-rcafe.github.io/home/Index.html).
+
++++
+```{link-button} https://delft-rcafe.github.io/home/Index.html#sec-upcoming
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Upcoming events
+```
+
+---
+**4TU.ResearchData**
+^^^
+[4TU.ResearchData](https://data.4tu.nl/) offers training and [community](https://community.data.4tu.nl/join-our-community/) engagement resources to research and research-support professionals working to make their research data findable, accessible, interoperable and reproducible (FAIR).
+
++++
+```{link-button} https://community.data.4tu.nl/category/training-events/
+:type: url
+:classes: btn-primary btn-block stretched-line text-white
+:text: Upcoming events
+```
+
+:::
+
+### Software Sustainability Institute
+Since 2010, the [Software Sustainability Institute](https://www.software.ac.uk/) has facilitated the advancement of software in research by cultivating better, more sustainable, research software to enable world-class research (“Better software, better research”). The Institute is based at the Universities of Edinburgh, Manchester, Oxford and Southampton, and draws on a team of experts with a breadth of experience in software development, project and programme management, research facilitation, publicity and community engagement.
 
 You can view their upcoming workshops at https://www.software.ac.uk/news.
 

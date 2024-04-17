@@ -47,19 +47,32 @@ For the maintainers, here are some tips 💡 for getting started with Discussion
 1. Create a conda environment in the terminal with 
 
     ```bash
-    conda env create -f environment.yml
+    conda env create -f environment.yml    
     ```
-1. Run `bash build.sh` to generate the documentation
+1. Activate the conda environment with
+
+    ```bash
+    conda activate dcc_guides_env
+    ```
+1. In the root of the repository, run the below command to generate the documentation
+
+    ```bash
+    bash build.sh
+    ```
+
 1. Go to the `./_build/html/` folder and open the `index.html` file. This should open the website in your browser.
 
 ### Deploying the website in your forked version
 1. Fork the repository to your own Github profile
-1. In your forked repository, under **Settings -> Pages** set Source to `gh-pages` and `/(root)` and press **Save**
+
 1. Either commit a new change to the repository to trigger the build action or manually trigger the action. To manually trigger the action, go to **Actions -> Deploy guides** and press `Run workflow` and `Run workflow`.
+
+1. In your forked repository, under **Settings -> Pages** set Source to `gh-pages` and `/(root)` and press **Save**
+
 
 ### You want to make some kind of change
 1. (**important**) announce your plan to the rest of the community *before you start working*. This announcement should be in the form of a (new) issue;
 1. (**important**) wait until some kind of consensus is reached about your idea being a good idea;
 1. if needed, fork the repository to your own Github profile and create your own feature branch off of the latest master commit. While working on your feature branch, make sure to stay up to date with the master branch by pulling in changes, possibly from the 'upstream' repository (follow the instructions [here](https://help.github.com/articles/configuring-a-remote-for-a-fork/) and [here](https://help.github.com/articles/syncing-a-fork/));
-1. [push](http://rogerdudler.github.io/git-guide/>) your feature branch to (your fork of) the DCC guides repository on GitHub;
+1. [push](http://rogerdudler.github.io/git-guide/) your feature branch to (your fork of) the DCC guides repository on GitHub;
 1. create the pull request, e.g. following the instructions [here](https://help.github.com/articles/creating-a-pull-request/). If needed, provide a link to the gh-pages in your forked repository: `https://<your-username>.github.io/TU-Delft-DCC.github.io/`.
